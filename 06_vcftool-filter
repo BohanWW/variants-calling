@@ -1,0 +1,4 @@
+#conda activate vcftools
+#https://vcftools.github.io/man_latest.html
+
+vcftools --vcf $1 --remove-indels --remove-filtered-all --maf 0.05 --min-alleles 2 --max-alleles 2 --max-missing 0.7 --recode --out filtered
