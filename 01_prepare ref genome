@@ -3,9 +3,11 @@
 
 #Index the reference genome Pt-1C-BFP supercontigs, index here is 'broad' short for BroadInstitute who sequenced Pt-1C-BFP
 # $1 = reference fasta; $2 isolate name
+mamba activate bowtie2
 bowtie2-build $1 $2
 
 #index the reference
+mamba activate samtools
 samtools faidx $1
 
 #Create .dict for reference
